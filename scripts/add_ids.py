@@ -52,12 +52,12 @@ def add_ids(requirement_data) -> None:
 
 # Get the list of all files and directories
 # dir_list = [
-#     "Global Business and International Political Economy(BS).json",
-#     "Business Administration Real Estate Management Concentration(BS).json",
+#     "Psychology(BS).json",
+#     "Speech, Language, and Hearing Sciences(BS).json",
 # ]
 # Get the list of all files and directories
 path = "degree_data"
-dir_list = os.listdir(path)
+# dir_list = os.listdir(path)
 
 for dir in dir_list:
     try:
@@ -75,7 +75,7 @@ for dir in dir_list:
 
         # Write to file
         f = open(f"degree_data/{dir}", "w")
-        f.write(json.dumps(data))
+        f.write(json.dumps(data, indent=2))
         f.close()
     except:
         print(dir)
